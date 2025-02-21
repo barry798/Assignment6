@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Project - Calculator & Stopwatch</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body { font-family: Arial, sans-serif; text-align: center; }
+        .container { width: 300px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        input, button { display: block; margin: 10px auto; padding: 5px; }
+        .error { color: red; font-size: 12px; }
+        .hidden { display: none; }  
+    </style>
+</head>
+<body>
+    <div class="container" id="login-page">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Northeastern Email">
+        <span class="error hidden" id="email-error"></span>
+        <input type="text" id="username" placeholder="Username">
+        <span class="error hidden" id="username-error"></span>
+        <input type="password" id="password" placeholder="Password">
+        <span class="error hidden" id="password-error"></span>
+        <input type="password" id="confirm-password" placeholder="Confirm Password">
+        <span class="error hidden" id="confirm-password-error"></span>
+        <button id="login" disabled>Login</button>
+    </div>
+
+    <div class="container hidden" id="calculator-page">
+        <h2>Calculator</h2>
+        <h3>Welcome, <span id="user-name"></span></h3>
+        <input type="text" id="num1" placeholder="Number 1">
+        <span class="error hidden" id="num1-error"></span>
+        <input type="text" id="num2" placeholder="Number 2">
+        <span class="error hidden" id="num2-error"></span>
+        <button class="operation" data-op="+">Add</button>
+        <button class="operation" data-op="-">Subtract</button>
+        <button class="operation" data-op="*">Multiply</button>
+        <button class="operation" data-op="/">Divide</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+    <div class="container" id="stopwatch-page">
+        <h2>Stopwatch</h2>
+        <input type="date" id="date-picker">
+        <h3 id="time">00:00:00</h3>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
